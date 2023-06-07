@@ -36,15 +36,12 @@ const InputElement = ({ type }) => {
         break;
       case TYPE_INPUT_NAME:
         setPlaceholder(TEXT_PLACEHOLDER_NAME);
-        setClassInput(`${styles.input} ${styles.input_hide}`);
         break;
       case TYPE_INPUT_PHONE:
         setPlaceholder(TEXT_PLACEHOLDER_PHONE);
-        setClassInput(`${styles.input} ${styles.input_hide}`);
         break;
       case TYPE_INPUT_EMAIL:
         setPlaceholder(type);
-        setClassInput(`${styles.input} ${styles.input_hide}`);
         break;
       case TYPE_INPUT_PASSWORD_SECOND:
         setPlaceholder(TEXT_PLACEHOLDER_PASSWORD_SECOND);
@@ -92,7 +89,7 @@ const InputElement = ({ type }) => {
       {(type === TYPE_INPUT_PHONE) && (
         <span className={styles.span}>{TEXT_SPAN_PHONE}</span>
       )}
-      {(type === TYPE_INPUT_PASSWORD && location.pathname === PATH_SIGN_IN) && (
+      {(type === TYPE_INPUT_PASSWORD || type === TYPE_INPUT_PASSWORD_SECOND) && (
         <img
           src={iconPassword}
           alt={TEXT_ICON_PASSWORD}
