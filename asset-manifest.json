@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/simple-reports%20/static/css/main.ba24d002.css",
+    "main.js": "/simple-reports%20/static/js/main.b195ebb3.js",
+    "static/js/787.749c5844.chunk.js": "/simple-reports%20/static/js/787.749c5844.chunk.js",
+    "static/media/RobotoCondensed-Regular.ttf": "/simple-reports%20/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
+    "static/media/lead_page.svg": "/simple-reports%20/static/media/lead_page.10e102d239900cba9483a3a6b54101a4.svg",
+    "static/media/logo.svg": "/simple-reports%20/static/media/logo.e1810cfc6414f9e1d2598534467d74eb.svg",
+    "static/media/icon_hide_password.svg": "/simple-reports%20/static/media/icon_hide_password.f209d0ca6baa81a40778a54726579381.svg",
+    "index.html": "/simple-reports%20/index.html",
+    "static/media/icon_show_password.svg": "/simple-reports%20/static/media/icon_show_password.4d793d7ce7b3459c87b1b7f27694fc15.svg",
+    "static/media/icon_checkbox.svg": "/simple-reports%20/static/media/icon_checkbox.3f789ea2fcff9258808f.svg",
+    "main.ba24d002.css.map": "/simple-reports%20/static/css/main.ba24d002.css.map",
+    "main.b195ebb3.js.map": "/simple-reports%20/static/js/main.b195ebb3.js.map",
+    "787.749c5844.chunk.js.map": "/simple-reports%20/static/js/787.749c5844.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba24d002.css",
+    "static/js/main.b195ebb3.js"
+  ]
+}
