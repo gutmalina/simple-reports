@@ -1,8 +1,4 @@
 .overlay {
-  max-width: 1216px;
-  height: calc(100vh - 80px);
-  margin: 0 auto;
-  padding-top: 38px;
   background: rgba(240, 241, 250, 0.9);
   border-radius: 30px 30px 0px 0px;
   display: flex;
@@ -18,7 +14,7 @@
   padding: 60px 50px;
   max-width: 392px;
   height: max-content;
-  margin-top: 108px;
+  margin-top: 146px;
 }
 
 .title {
