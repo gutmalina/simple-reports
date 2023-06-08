@@ -8,6 +8,7 @@ import {
   TYPE_INPUT_NAME,
   TYPE_INPUT_PHONE,
   TYPE_INPUT_EMAIL,
+  TEXT_PLACEHOLDER_EMAIL,
   TEXT_PLACEHOLDER_PASSWORD,
   TEXT_PLACEHOLDER_PASSWORD_SECOND,
   TEXT_PLACEHOLDER_NAME,
@@ -41,7 +42,7 @@ const InputElement = ({ type }) => {
         setPlaceholder(TEXT_PLACEHOLDER_PHONE);
         break;
       case TYPE_INPUT_EMAIL:
-        setPlaceholder(type);
+        setPlaceholder(TEXT_PLACEHOLDER_EMAIL);
         break;
       case TYPE_INPUT_PASSWORD_SECOND:
         setPlaceholder(TEXT_PLACEHOLDER_PASSWORD_SECOND);
