@@ -13,17 +13,11 @@ import {
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [isLoader, setIsLoader] = useState(false);
   const [classHeader, setClassHeader] = useState(`${styles.header}`)
 
   useEffect(()=>{
-    setIsLoader(true)
-  }, [])
-
-  useEffect(()=>{
     setClassHeader(`${styles.header} ${styles.header_show}`)
-  }, [isLoader])
-
+  }, [])
 
   return (
     <header className={classHeader}>
