@@ -1,4 +1,4 @@
-import styles from "./page-overlay.module.css";
+import styles from "./page-with-form.module.css";
 import globalStyles from '../../components/global-styles.module.css';
 import {
   TEXT_PAGE_SIGN_IN,
@@ -16,7 +16,7 @@ import {
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const PageOverlay = ({ children }) => {
+const PageWithForm = ({ children }) => {
   const location = useLocation();
   const [textTitle, setTextTitle] = useState("");
 
@@ -75,4 +75,4 @@ const PageOverlay = ({ children }) => {
   );
 };
 
-export default PageOverlay;
+export default PageWithForm;
