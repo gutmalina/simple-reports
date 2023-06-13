@@ -24,6 +24,16 @@
   animation: jump .8s ease 4s forwards;
 }
 
+.btn_theme_grey {
+  visibility: visible;
+  background: transparent;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+  box-shadow: none;
+  letter-spacing: 0.4px;
+}
+
 .btn_theme_blue {
   visibility: visible;
   background: var(--color-links);
@@ -55,4 +65,22 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.btn_connect {
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  align-self: flex-end;
+}
+
+.btn_add {
+  background-image: url(../../images/icon_plus.svg);
+}
+
+.btn_edit {
+  background-image: url(../../images/icon_pencil.svg);
 }
