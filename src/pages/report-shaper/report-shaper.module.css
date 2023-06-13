@@ -18,3 +18,9 @@
   gap: 20px;
   align-self: flex-end;
 }
+
+.group_fillter {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 20px;
+}

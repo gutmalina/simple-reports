@@ -83,3 +83,31 @@ export const CARD_ADVERTISING = [
     company_id: 25603
   }
 ]
+
+export const TYPE_FILTER_OFFICES = 'Кабинеты';
+export const TEXT_FILTER_OFFICES = 'Выберите кабинеты';
+export const OFFICES = [
+  'Парадигма',
+  'Импульс медиа'
+];
+
+export const TYPE_FILTER_CAMPAIGN = 'Кампании';
+export const TEXT_FILTER_CAMPAIGN = 'Выберите кампании';
+export const CAMPAIGN = [
+  'Вебинар',
+  'Промоакция',
+  'Наружная реклама',
+  'E-mail рассылки',
+];
+
+export const TYPE_FILTER_GROUPING = 'За всё время';
+export const TEXT_FILTER_GROUPING = 'Тип группировки';
+export const GROUPING = [
+  'За всё время',
+  'Выбор 2'
+];
+
+export const TYPE_FILTER_DATA_REPORT = 'data_report';
+export const TEXT_FILTER_DATA_REPORT = 'Задайте период формирования отчёта';
+export const TEXT_FILTER_DATA_START = 'Начало периода';
+export const TEXT_FILTER_DATA_FINISH = 'Конец периода';
