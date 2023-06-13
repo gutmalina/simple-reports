@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/simple-reports/static/css/main.2100e103.css",
-    "main.js": "/simple-reports/static/js/main.7812e1ba.js",
+    "main.css": "/simple-reports/static/css/main.01e9ebc7.css",
+    "main.js": "/simple-reports/static/js/main.4ba11d9e.js",
     "static/js/787.749c5844.chunk.js": "/simple-reports/static/js/787.749c5844.chunk.js",
     "static/media/Roboto-Medium.ttf": "/simple-reports/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Regular.ttf": "/simple-reports/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
@@ -18,12 +18,12 @@
     "static/media/icon_filled.svg": "/simple-reports/static/media/icon_filled.8c7f14c27b143093315a.svg",
     "static/media/icon_checkbox.svg": "/simple-reports/static/media/icon_checkbox.3f789ea2fcff9258808f.svg",
     "static/media/icon_plus.svg": "/simple-reports/static/media/icon_plus.0cfbdac6cf1ccb571cf9.svg",
-    "main.2100e103.css.map": "/simple-reports/static/css/main.2100e103.css.map",
-    "main.7812e1ba.js.map": "/simple-reports/static/js/main.7812e1ba.js.map",
+    "main.01e9ebc7.css.map": "/simple-reports/static/css/main.01e9ebc7.css.map",
+    "main.4ba11d9e.js.map": "/simple-reports/static/js/main.4ba11d9e.js.map",
     "787.749c5844.chunk.js.map": "/simple-reports/static/js/787.749c5844.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2100e103.css",
-    "static/js/main.7812e1ba.js"
+    "static/css/main.01e9ebc7.css",
+    "static/js/main.4ba11d9e.js"
   ]
 }
