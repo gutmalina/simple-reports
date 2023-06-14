@@ -5,15 +5,19 @@ import {
   TYPE_FILTER_GROUPING,
   TYPE_FILTER_OFFICES,
   TYPE_FILTER_DATA_REPORT,
+  TYPE_FILTER_METRICS,
   TEXT_FILTER_DATA_REPORT,
   TEXT_FILTER_CAMPAIGN,
   TEXT_FILTER_GROUPING,
   TEXT_FILTER_OFFICES,
   TEXT_FILTER_DATA_START,
   TEXT_FILTER_DATA_FINISH,
+  TEXT_FILTER_METRICS,
   OFFICES,
   CAMPAIGN,
   GROUPING,
+  METRICS,
+  METRICS_DEFAULT
 } from "../../utils/constants";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -22,9 +26,7 @@ import FormControl from "@mui/material/FormControl";
 import ListItemText from "@mui/material/ListItemText";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { DemoItem } from "@mui/x-date-pickers/internals/demo";
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const ITEM_HEIGHT = 40;
 const ITEM_PADDING_TOP = 1;
@@ -37,11 +39,9 @@ const MenuProps = {
   },
 };
 
-const SelectElement = ({ type }) => {
+const SelectElement = ({ type, setPersonName, personName }) => {
   const [textTitle, setTextTitle] = useState("");
   const [menu, setMenu] = useState("");
-
-  const [personName, setPersonName] = useState([]);
 
   const handleChange = (event) => {
     const {
@@ -71,6 +71,11 @@ const SelectElement = ({ type }) => {
         setTextTitle(TEXT_FILTER_DATA_REPORT);
         setMenu("");
         break;
+      case TYPE_FILTER_METRICS:
+        setTextTitle(TEXT_FILTER_METRICS);
+        setMenu(METRICS);
+        setPersonName(METRICS_DEFAULT)
+        break;
       default:
         return;
     }
@@ -97,19 +102,33 @@ const SelectElement = ({ type }) => {
               renderValue={(selected) => selected.join(", ")}
               MenuProps={MenuProps}
             >
-              {menu.map((item) => (
-                <MenuItem key={item} value={item}>
-                  <Checkbox checked={personName.indexOf(item) > -1} />
-                  <ListItemText primary={item} />
-                </MenuItem>
-              ))}
+              {menu.map((item) =>
+                type !== TYPE_FILTER_GROUPING ? (
+                  <MenuItem key={item} value={item}>
+                    <Checkbox checked={personName.indexOf(item) > -1} />
+                    <ListItemText primary={item} />
+                  </MenuItem>
+                ) : (
+                  <MenuItem key={item} value={item}>
+                    {item}
+                  </MenuItem>
+                )
+              )}
             </Select>
           </FormControl>
         </div>
       ) : (
         <div className={styles.group_data}>
-          <DatePicker label={TEXT_FILTER_DATA_START} slotProps={{ textField: { size: 'small' } }} sx={{width: 191}}/>
-          <DatePicker label={TEXT_FILTER_DATA_FINISH} slotProps={{ textField: { size: 'small' } }} sx={{width: 191}}/>
+          <DatePicker
+            label={TEXT_FILTER_DATA_START}
+            slotProps={{ textField: { size: "small" } }}
+            sx={{ width: 191 }}
+          />
+          <DatePicker
+            label={TEXT_FILTER_DATA_FINISH}
+            slotProps={{ textField: { size: "small" } }}
+            sx={{ width: 191 }}
+          />
         </div>
       )}
     </article>

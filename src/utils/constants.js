@@ -111,3 +111,29 @@ export const TYPE_FILTER_DATA_REPORT = 'data_report';
 export const TEXT_FILTER_DATA_REPORT = 'Задайте период формирования отчёта';
 export const TEXT_FILTER_DATA_START = 'Начало периода';
 export const TEXT_FILTER_DATA_FINISH = 'Конец периода';
+
+export const TYPE_FILTER_METRICS = 'Настройки';
+export const TEXT_FILTER_METRICS = 'Настройка таблицы';
+export const METRICS  = [
+  'Кампания',
+  'Показы',
+  'CPM',
+  'Клики',
+  'CTR',
+  'CPC',
+  'CR% Подписчики',
+  'CPF',
+  'Лиды',
+  'CR% Лиды',
+  'CPL',
+  'Потрачено'
+]
+export const METRICS_DEFAULT = [
+  'Компания',
+  'Показы',
+  'CPM',
+  'Клики',
+  'CTR',
+  'CPC',
+  'Потрачено',
+]
