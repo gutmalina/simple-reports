@@ -46,3 +46,10 @@
   margin-top: 10px;
   z-index: 10;
 }
+
+.span_help {
+  width: max-content;
+  max-width: 185px;
+  left: -50px;
+  top: 25px;
+}
