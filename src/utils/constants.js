@@ -35,8 +35,6 @@ export const TEXT_SPAN_PHONE = 'Например : +7 (999) 000-00-00';
 export const TEXT_ICON_PASSWORD = 'show password';
 export const TEXT_ICON_INFO = 'Сервису «Simple Reports» будет предоставлен доступ к общей информации, к рекламным кабинетам и сообществам в любое время.';
 export const TEXT_ICON_INFO_ALT = 'Reference information';
-export const TEXT_SELECT_METRICS = 'Выберите метрики в том порядке, в каком они должны отобразиться в отчёте';
-export const TEXT_ADD_BREAKDOWN = 'Добавить разбивку по объявлениям';
 
 export const TYPE_BTN_TRY = 'try';
 export const TYPE_BTN_SIGN_IN = 'sign-in';
@@ -53,12 +51,19 @@ export const TYPE_INPUT_NAME = 'name';
 export const TYPE_INPUT_PHONE = 'phone';
 export const TYPE_ICON_FILLED = 'filled';
 export const TYPE_ICON_FILLED_HELP = 'filled_help';
+export const TYPE_INPUT_CLIENT_ID = 'client_id';
+export const TYPE_INPUT_CLIENT_SECRET = 'client_secret';
 
 export const PATH_HOME = '/';
 export const PATH_SIGN_IN = "/login";
 export const PATH_SIGN_UP = "/register";
 export const PATH_RESTORE = "/restore";
 export const PATH_REPORT_SHAPER = "/report/shaper";
+export const PATH_CABINET = "/cabinet";
+
+export const REPORT_IN_PROGRESS = 'В процессе формирования';
+export const REPORT_READY = 'Сформирован';
+export const REPORT_ERROR = 'Ошибка формирования';
 
 export const CARD_INFO_LEAD = [
   {
