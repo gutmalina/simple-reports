@@ -19,6 +19,7 @@ export const TEXT_PAGE_RESTORE = 'Восстановление пароля';
 export const TEXT_PAGE_REPORT_SHAPER = 'Формирование отчета';
 export const TEXT_PAGE_REPORT_SHAPER_SUBTITLE = 'Подключите и выберите рекламную платформу';
 export const TEXT_PAGE_RESTORE_SUBTITLE = 'На вашу почту будет отправлено письмо с ссылкой для смены пароля';
+
 export const TEXT_DATA_PROCESSING = 'Даю согласие на обработку персональных данных согласно ';
 export const TEXT_DATA_PROCESSING_LINK = 'политике конфиденциальности';
 
@@ -35,6 +36,10 @@ export const TEXT_SPAN_PHONE = 'Например : +7 (999) 000-00-00';
 export const TEXT_ICON_PASSWORD = 'show password';
 export const TEXT_ICON_INFO = 'Сервису «Simple Reports» будет предоставлен доступ к общей информации, к рекламным кабинетам и сообществам в любое время.';
 export const TEXT_ICON_INFO_ALT = 'Reference information';
+export const TEXT_PLACEHOLDER_CLIENT_ID = 'ID клиента';
+export const TEXT_PLACEHOLDER_CLIENT_SECRET = 'Секретный ключ';
+export const TEXT_SELECT_METRICS = 'Выберите метрики в том порядке, в каком они должны отобразиться в отчёте';
+export const TEXT_ADD_BREAKDOWN = 'Добавить разбивку по объявлениям';
 
 export const TYPE_BTN_TRY = 'try';
 export const TYPE_BTN_SIGN_IN = 'sign-in';

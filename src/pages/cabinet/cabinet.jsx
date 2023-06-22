@@ -12,7 +12,8 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { DesktopDatePicker } from '@mui/x-date-pickers'
 import SimpleInputElement from '../../components/simple-input-element/simple-input-element'
 import SelectInput from './select'
-import { set } from 'date-fns'
+import { set } from 'date-fns';
+import Footer from '../../components/footer/footer';
 
 const Cabinet = () => {
   const [hoveredColumn, setHoveredColumn] = useState(null)
@@ -260,6 +261,7 @@ const Cabinet = () => {
             </table>
           </div>
         </div>
+        <Footer/>
       </div>
     </LocalizationProvider>
   )

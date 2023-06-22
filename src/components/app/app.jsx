@@ -1,5 +1,4 @@
 import Header from "../header/header";
-import Footer from "../footer/footer";
 import Lead from "../lead/lead";
 import Login from "../../pages/login/login";
 import Register from "../../pages/register/register";
@@ -25,14 +24,14 @@ const App = () => {
     <>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Header/>
-          <Routes>
-            <Route path={PATH_HOME} element={<Lead />} />
-            <Route path={PATH_SIGN_IN} element={<PageWithForm><Login/></PageWithForm>} />
-            <Route path={PATH_SIGN_UP} element={<PageWithForm><Register/></PageWithForm>} />
-            <Route path={PATH_RESTORE} element={<PageWithForm><RestorePassword/></PageWithForm>} />
-            <Route path={PATH_REPORT_SHAPER} element={<PageWithReport><ReportCustom/></PageWithReport>} />
-            <Route path={PATH_CABINET} element={<Cabinet />} />
-          </Routes>
+        <Routes>
+          <Route path={PATH_HOME} element={<Lead />} />
+          <Route path={PATH_SIGN_IN} element={<PageWithForm><Login/></PageWithForm>} />
+          <Route path={PATH_SIGN_UP} element={<PageWithForm><Register/></PageWithForm>} />
+          <Route path={PATH_RESTORE} element={<PageWithForm><RestorePassword/></PageWithForm>} />
+          <Route path={PATH_REPORT_SHAPER} element={<PageWithReport><ReportCustom/></PageWithReport>} />
+          <Route path={PATH_CABINET} element={<Cabinet/>} />
+        </Routes>
       </LocalizationProvider>
     </>
   );
