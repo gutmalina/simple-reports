@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/simple-reports/static/css/main.a387cf9a.css",
-    "main.js": "/simple-reports/static/js/main.7c6f55c7.js",
+    "main.css": "/simple-reports/static/css/main.7caabf35.css",
+    "main.js": "/simple-reports/static/js/main.11da77ff.js",
     "static/js/787.749c5844.chunk.js": "/simple-reports/static/js/787.749c5844.chunk.js",
     "static/media/Roboto-Medium.ttf": "/simple-reports/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Regular.ttf": "/simple-reports/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
@@ -14,19 +14,23 @@
     "index.html": "/simple-reports/index.html",
     "static/media/icon_show_password.svg": "/simple-reports/static/media/icon_show_password.4d793d7ce7b3459c87b1b7f27694fc15.svg",
     "static/media/cursor.svg": "/simple-reports/static/media/cursor.708f2da92d27f4481974.svg",
+    "static/media/icon_update.svg": "/simple-reports/static/media/icon_update.abb40df8446e26b11a93.svg",
     "static/media/icon_filled_help.svg": "/simple-reports/static/media/icon_filled_help.87ab0b971d57e8ac2878.svg",
     "static/media/icon_filled_blue.svg": "/simple-reports/static/media/icon_filled_blue.2f0d8a7a7938d2f4b80f.svg",
     "static/media/icon_checkbox_blue.svg": "/simple-reports/static/media/icon_checkbox_blue.a81925e9dc1c1c234f14.svg",
     "static/media/icon_pencil.svg": "/simple-reports/static/media/icon_pencil.51bb144b49056a7888d0.svg",
     "static/media/icon_filled.svg": "/simple-reports/static/media/icon_filled.8c7f14c27b143093315a.svg",
+    "static/media/icon_info.svg": "/simple-reports/static/media/icon_info.834ddb61f3187f4f0fdb.svg",
     "static/media/icon_checkbox.svg": "/simple-reports/static/media/icon_checkbox.3f789ea2fcff9258808f.svg",
     "static/media/icon_plus.svg": "/simple-reports/static/media/icon_plus.0cfbdac6cf1ccb571cf9.svg",
-    "main.a387cf9a.css.map": "/simple-reports/static/css/main.a387cf9a.css.map",
-    "main.7c6f55c7.js.map": "/simple-reports/static/js/main.7c6f55c7.js.map",
+    "static/media/icon_checked.svg": "/simple-reports/static/media/icon_checked.d010f36a7dc82958045c.svg",
+    "static/media/icon_download.svg": "/simple-reports/static/media/icon_download.961a973e80f99a009089.svg",
+    "main.7caabf35.css.map": "/simple-reports/static/css/main.7caabf35.css.map",
+    "main.11da77ff.js.map": "/simple-reports/static/js/main.11da77ff.js.map",
     "787.749c5844.chunk.js.map": "/simple-reports/static/js/787.749c5844.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a387cf9a.css",
-    "static/js/main.7c6f55c7.js"
+    "static/css/main.7caabf35.css",
+    "static/js/main.11da77ff.js"
   ]
 }
