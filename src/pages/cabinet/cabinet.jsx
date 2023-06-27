@@ -12,8 +12,9 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { DesktopDatePicker } from '@mui/x-date-pickers'
 import SimpleInputElement from '../../components/simple-input-element/simple-input-element'
 import SelectInput from './select'
-import { set } from 'date-fns';
-import Footer from '../../components/footer/footer';
+import { set } from 'date-fns'
+import Footer from '../../components/footer/footer'
+import SortingModal from './sorting_modal'
 
 const Cabinet = () => {
   const [hoveredColumn, setHoveredColumn] = useState(null)
@@ -84,17 +85,20 @@ const Cabinet = () => {
   const renderSortingButton = (column) => {
     if (hoveredColumn === column) {
       return (
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            setIsSortingVisible({
-              ...isSortingVisible,
-              [column]: !isSortingVisible[column]
-            })
-          }}
-        >
-          Сортировка
-        </button>
+        <div className={styles.sorting_icon_container}>
+          <div
+            className={styles.vert_dots}
+            onClick={(e) => {
+              e.preventDefault()
+              setIsSortingVisible({
+                report_name: false,
+                report_status: false,
+                report_date: false,
+                [column]: !isSortingVisible[column]
+              })
+            }}
+          ></div>{' '}
+        </div>
       )
     }
     return null
@@ -106,7 +110,9 @@ const Cabinet = () => {
       [column]: value
     })
     setIsSortingVisible({
-      ...isSortingVisible,
+      report_name: false,
+      report_status: false,
+      report_date: false,
       [column]: false
     })
   }
@@ -115,24 +121,6 @@ const Cabinet = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.background}>
         <div className={styles.container}>
-          <div className={styles.report_name_modal}>
-            <SelectInput
-              visible={isSortingVisible['report_name']}
-              onChange={handleSortingChange('report_name')}
-            />
-          </div>
-          <div className={styles.report_status_modal}>
-            <SelectInput
-              visible={isSortingVisible['report_status']}
-              onChange={handleSortingChange('report_status')}
-            />
-          </div>
-          <div className={styles.report_date_modal}>
-            <SelectInput
-              visible={isSortingVisible['report_date']}
-              onChange={handleSortingChange('report_date')}
-            />
-          </div>
           <h2 className={styles.heading}>Личный кабинет</h2>
           <div className={styles.user_info}>
             <div className={styles.user_info_first_row}>
@@ -177,6 +165,26 @@ const Cabinet = () => {
                 slotProps={{ textField: { size: 'small' } }}
               />
             </div>
+          </div>
+          <div className={styles.modals}>
+            <SortingModal
+              isVisible={isSortingVisible['report_name']}
+              onChange={handleSortingChange('report_name')}
+              leftPosition={0}
+              width={'391px'}
+            />
+            <SortingModal
+              isVisible={isSortingVisible['report_status']}
+              onChange={handleSortingChange('report_status')}
+              leftPosition={'392px'}
+              width={'308px'}
+            />
+            <SortingModal
+              isVisible={isSortingVisible['report_date']}
+              onChange={handleSortingChange('report_date')}
+              leftPosition={'701px'}
+              width={'308px'}
+            />
           </div>
           <div className={styles.table_container}>
             <table className={styles.table}>
@@ -261,7 +269,7 @@ const Cabinet = () => {
             </table>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </LocalizationProvider>
   )

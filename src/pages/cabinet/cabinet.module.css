@@ -1,4 +1,5 @@
 .background {
+  width: 100%;
   background: var(--color-overlay);
   border-radius: 30px 30px 0px 0px;
 }
@@ -83,17 +84,27 @@
 }
 
 .table_container {
+  position: relative;
   margin-top: 20px;
+  padding-top: 26px;
   width: 1216px;
-  height: 352px;
   border-collapse: collapse;
   background: #ffffff;
   border-radius: 10px 10px 0px 0px;
+  height: 352px;
+  z-index: 1;
   overflow: scroll;
 }
 
+.table_container_background {
+  position: relative;
+  top: 0;
+  width: 1216px;
+  height: 26px;
+  background: red;
+}
+
 .table {
-  padding-top: 26px;
   text-align: start;
   border-spacing: 0;
 }
@@ -101,7 +112,6 @@
 .table_head {
   color: var(--color-main);
   text-align: left;
-  padding-left: 16px;
   height: 36px;
   font-family: 'Roboto';
   font-style: normal;
@@ -111,6 +121,7 @@
   letter-spacing: 0.15px;
   position: sticky;
   top: 0;
+  z-index: 2;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.23);
 }
@@ -118,6 +129,8 @@
 .table_head tr th,
 .table_body tr td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+  position: relative;
+  background-color: #ffffff;
 }
 
 .table_head tr:hover th {
@@ -218,34 +231,28 @@
   cursor: pointer;
 }
 
-.report_name_modal {
-  width: 391px;
-  background-color: white;
-  position: absolute;
-  top: 418px;
-  z-index: 2;
-  box-shadow: 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+.vert_dots {
+  background-image: url(../../images/vert_dots.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
 }
 
-.report_status_modal {
-  width: 308px;
-  background-color: white;
+.sorting_icon_container {
   position: absolute;
-  top: 418px;
-  left: 392px;
-  z-index: 2;
-  box-shadow: 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
 }
 
-.report_date_modal {
-  width: 308px;
-  background-color: white;
+.modals {
   position: absolute;
-  top: 418px;
-  left: calc(392px + 309px);
-  z-index: 2;
-  box-shadow: 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  top: 355px;
+  width: 1216px;
+  height: 27px;
+  background-color: #ffffff;
+  z-index: 3;
+  border-radius: 10px 10px 0px 0px;
 }
