@@ -65,6 +65,7 @@ export const PATH_SIGN_UP = "/register";
 export const PATH_RESTORE = "/restore";
 export const PATH_REPORT_SHAPER = "/report/shaper";
 export const PATH_CABINET = "/cabinet";
+export const PATH_MAIN_REPORT = "/main";
 
 export const REPORT_IN_PROGRESS = 'В процессе формирования';
 export const REPORT_READY = 'Сформирован';

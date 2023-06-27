@@ -8,7 +8,7 @@ const SelectInput = ({ onChange }) => {
     setChosen(value)
     onChange(value)
   }
-  
+
   return (
     <div className={styles.sorting_container}>
       <div

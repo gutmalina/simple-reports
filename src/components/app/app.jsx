@@ -16,8 +16,10 @@ import {
   PATH_SIGN_IN,
   PATH_SIGN_UP,
   PATH_RESTORE,
-  PATH_REPORT_SHAPER
+  PATH_REPORT_SHAPER,
+  PATH_MAIN_REPORT
 } from "../../utils/constants";
+import MainReport from "../../pages/main_report/main_report";
 
 const App = () => {
   return (
@@ -31,6 +33,7 @@ const App = () => {
           <Route path={PATH_RESTORE} element={<PageWithForm><RestorePassword/></PageWithForm>} />
           <Route path={PATH_REPORT_SHAPER} element={<PageWithReport><ReportCustom/></PageWithReport>} />
           <Route path={PATH_CABINET} element={<Cabinet/>} />
+          <Route path={PATH_MAIN_REPORT} element={<MainReport/>} />
         </Routes>
       </LocalizationProvider>
     </>

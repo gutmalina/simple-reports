@@ -1,5 +1,5 @@
 import React from 'react'
-import SelectInput from './select'
+import SelectInput from '../../pages/cabinet/select'
 import styles from './sorting_modal.module.css'
 
 const SortingModal = ({ isVisible, onChange, leftPosition, width }) => {

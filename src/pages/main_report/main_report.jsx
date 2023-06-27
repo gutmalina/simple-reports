@@ -1,4 +1,4 @@
-import styles from './cabinet.module.css'
+import styles from './main_report.module.css'
 import React, { useState } from 'react'
 import {
   REPORT_IN_PROGRESS,
@@ -13,8 +13,9 @@ import { DesktopDatePicker } from '@mui/x-date-pickers'
 import SimpleInputElement from '../../components/simple-input-element/simple-input-element'
 import Footer from '../../components/footer/footer'
 import SortingModal from '../../components/sorting_modal/sorting_modal'
+import CheckMarks from './checkmarks'
 
-const Cabinet = () => {
+const MainReport = () => {
   const [hoveredColumn, setHoveredColumn] = useState(null)
   const [isSortingVisible, setIsSortingVisible] = useState({
     report_name: false,
@@ -37,6 +38,12 @@ const Cabinet = () => {
   const [email, setEmail] = useState('study.business@yandex.ru')
   const [startDate, setStartDate] = useState(new Date())
   const [endData, setEndDate] = useState(new Date())
+  const listItemsCampaigns = [
+    'Вебинар',
+    'Промо акция',
+    'Наружная реклама',
+    'E-mail рассылки'
+  ]
   const [reports, setReports] = useState([
     {
       id: 1,
@@ -167,49 +174,53 @@ const Cabinet = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.background}>
         <div className={styles.container}>
-          <h2 className={styles.heading}>Личный кабинет</h2>
-          <div className={styles.user_info}>
-            <div className={styles.user_info_first_row}>
-              <h3 className={styles.name}>
-                {firstname} {lastname}
-              </h3>
-              <h4 className={styles.phone}>{phone}</h4>
+          <h2 className={styles.heading}>Основной отчет</h2>
+          <div className={styles.target_platform}>
+            <div className={styles.target_platform_item}>
+              ВКонтакте ID: 13159
             </div>
-            <p className={styles.user_info_second_row}>{email}</p>
+            <div className={styles.target_platform_item}>
+              MyTarget ID: 58136
+            </div>
           </div>
-          <form className={styles.client_credentials}>
-            <SimpleInputElement
-              type={TYPE_INPUT_CLIENT_ID}
-              value={credentials[TYPE_INPUT_CLIENT_ID]}
-              onChange={(e) => {
-                onChange(e)
-              }}
-            />
-            <SimpleInputElement
-              type={TYPE_INPUT_CLIENT_SECRET}
-              value={credentials[TYPE_INPUT_CLIENT_SECRET]}
-              onChange={(e) => {
-                onChange(e)
-              }}
-            />
-          </form>
-          <h3 className={styles.report_history}>
-            История сформированных отчётов
-          </h3>
-          <div className={styles.report_history_date}>
-            <div className={styles.date_pickers}>
-              <DesktopDatePicker
-                className={styles.calendar}
-                value={startDate}
-                onChange={(date) => setStartDate(date)}
-                slotProps={{ textField: { size: 'small' } }}
-              />
-              <div className={styles.space}>-</div>
-              <DesktopDatePicker
-                value={endData}
-                onChange={(date) => setEndDate(date)}
-                slotProps={{ textField: { size: 'small' } }}
-              />
+          <div className={styles.report_filtering}>
+            <div className={styles.left_side}>
+              <CheckMarks
+                name={'Кабинеты'}
+                listItems={listItemsCampaigns}
+                marginLeft={113}
+              ></CheckMarks>
+              <CheckMarks
+                name={'Кампании'}
+                listItems={listItemsCampaigns}
+                marginLeft={113}
+              ></CheckMarks>
+              <div className={styles.report_history_date}>
+                <div className={styles.date_pickers}>
+                  <DesktopDatePicker
+                    className={styles.calendar}
+                    value={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    slotProps={{ textField: { size: 'small' } }}
+                  />
+                  <div className={styles.space}>-</div>
+                  <DesktopDatePicker
+                    value={endData}
+                    onChange={(date) => setEndDate(date)}
+                    slotProps={{ textField: { size: 'small' } }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={styles.right_side}>
+              <div className={styles.groupping_item}>
+                <span className={styles.groupping_item_name}>Тип группировки:{' '}</span>
+                <span className={styles.groupping_item_value}>за всё время</span>
+              </div>
+              <div className={styles.groupping_item}>
+                <span className={styles.groupping_item_name}>Разбивка:{' '}</span>
+                <span className={styles.groupping_item_value}>по объявлениям</span>
+              </div>
             </div>
           </div>
           <div className={styles.modals}>
@@ -233,7 +244,7 @@ const Cabinet = () => {
             />
           </div>
           <div className={styles.table_container}>
-            <table className={styles.table}>
+            {/* <table className={styles.table}>
               <thead className={styles.table_head}>
                 <tr>
                   <th
@@ -312,7 +323,7 @@ const Cabinet = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table> */}
           </div>
         </div>
         <Footer />
@@ -321,4 +332,4 @@ const Cabinet = () => {
   )
 }
 
-export default Cabinet
+export default MainReport
