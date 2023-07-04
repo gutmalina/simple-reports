@@ -5,16 +5,23 @@ import {
   REPORT_READY,
   REPORT_ERROR,
   TYPE_INPUT_CLIENT_ID,
-  TYPE_INPUT_CLIENT_SECRET
+  TYPE_INPUT_CLIENT_SECRET,
+  TYPE_BTN_SAVE,
+  TYPE_BTN_EDIT
 } from '../../utils/constants'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { DesktopDatePicker } from '@mui/x-date-pickers'
 import SimpleInputElement from '../../components/simple-input-element/simple-input-element'
 import Footer from '../../components/footer/footer'
-import SortingModal from '../../components/sorting_modal/sorting_modal'
+import SortingModal from '../../components/sorting_modal/sorting_modal';
+import ButtonElement from '../../components/button-element/button-element'
+import { useDispatch } from 'react-redux';
+import { addAdvCabinet } from '../../store/auth'
 
 const Cabinet = () => {
+  const dispatch = useDispatch();
+  const [textButtonSubmit, setTextButtonSubmit] = useState(TYPE_BTN_SAVE)
   const [hoveredColumn, setHoveredColumn] = useState(null)
   const [isSortingVisible, setIsSortingVisible] = useState({
     report_name: false,
@@ -106,7 +113,7 @@ const Cabinet = () => {
       ...credentials,
       [e.target.name]: e.target.value
     })
-    console.log(credentials)
+    // console.log(credentials)
   }
   const handleMouseEnter = (column) => {
     setHoveredColumn(column)
@@ -163,6 +170,12 @@ const Cabinet = () => {
     })
   }
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addAdvCabinet(credentials))
+    setTextButtonSubmit(TYPE_BTN_EDIT)
+  }
+
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.background}>
@@ -177,7 +190,7 @@ const Cabinet = () => {
             </div>
             <p className={styles.user_info_second_row}>{email}</p>
           </div>
-          <form className={styles.client_credentials}>
+          <form className={styles.client_credentials} onSubmit={handleFormSubmit}>
             <SimpleInputElement
               type={TYPE_INPUT_CLIENT_ID}
               value={credentials[TYPE_INPUT_CLIENT_ID]}
@@ -192,6 +205,7 @@ const Cabinet = () => {
                 onChange(e)
               }}
             />
+            <ButtonElement type={textButtonSubmit}></ButtonElement>
           </form>
           <h3 className={styles.report_history}>
             История сформированных отчётов
