@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  // user: null,
-  user: 'Константинов Константин',
-  // isAuthenticated: false,
-  isAuthenticated: true,
+  user: null,
+  // user: 'Константинов Константин',
+  isAuthenticated: false,
+  // isAuthenticated: true,
   onSuccess: null,
   errors: null,
-  // email: null,
-  email: 'study.business@yandex.ru',
+  email: null,
+  // email: 'study.business@yandex.ru',
   AdvPlatform: null,
   AdvCabinet: null,
   isAdvCabinet: false
