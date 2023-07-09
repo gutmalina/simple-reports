@@ -6,7 +6,7 @@ import RestorePassword from "../../pages/restore-password/restore-password";
 import ReportSettings from "../../pages/report-settings/report-settings";
 import PageWithForm from "../../pages/page-with-form/page-with-form";
 import PageWithReport from "../../pages/page-with-report/page-with-report";
-import Cabinet from "../../pages/profile/cabinet";
+import Cabinet from "../../pages/cabinet/cabinet";
 import { Routes, Route } from "react-router-dom";
 import {
   PATH_CABINET,
